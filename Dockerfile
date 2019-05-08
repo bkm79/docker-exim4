@@ -4,7 +4,7 @@ RUN apt update && apt install -y clamav git libpcre3-dev build-essential libdb-d
     cd /opt && git clone https://github.com/LynxChaus/libsrs-alt && cd libsrs-alt && ./configure && make && make install && cp /usr/local/lib/libsrs* /usr/lib/ && \
     cd /opt && git clone https://github.com/exim/exim && mkdir -p exim/src/Local && useradd exim4
 
-RUN apt install -y uuid-dev libgcrypt-dev libestr-dev flex dh-autoreconf bison python-docutils libxml2-dev wget perl subversion libmysql++-dev re2c && \
+RUN apt install -y libcurl uuid-dev libgcrypt-dev libestr-dev flex dh-autoreconf bison python-docutils libxml2-dev wget perl subversion libmysql++-dev re2c && \
     cd /opt && git clone https://github.com/rsyslog/libfastjson && cd libfastjson && autoreconf -v --install && ./configure && make && make install && \
     git clone https://github.com/rsyslog/liblogging && cd liblogging && autoreconf -v --install && ./configure --disable-man-pages && make && make install && \
     git clone https://github.com/rsyslog/rsyslog && cd rsyslog && ./autogen.sh --enable-omstdout && make && make install && \
