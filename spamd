@@ -7,4 +7,4 @@ chmod 777 -R /var/spool/sa-exim/
 wget http://www.wentor.ru/download/spamassassin/99_wentor.cf
 sa-update
 sa-compile
-/usr/local/bin/spamd -q -x -l -u spamd --max-children=64 --min-children=8 --min-spare=8 --max-spare=32
+/usr/sbin/spamd -q -x -l -u spamd --max-children=64 --min-children=8 --min-spare=8 --max-spare=32

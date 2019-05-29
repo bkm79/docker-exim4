@@ -2,8 +2,8 @@
 #bug fix for container restart
 (rm /run/rsyslog.pid | true)
 
-chmod 777 -R /usr/local/share/clamav/
-if [ ! -f /usr/local/share/clamav/bytecode.cvd ]
+chmod 777 -R /var/lib/clamav/
+if [ ! -f /var/lib/clamav/bytecode.cvd ]
 then
 #first run - get full virus databases
   freshclam
