@@ -1,4 +1,4 @@
-FROM debian:latest
+FROM debian:9.11
 
 RUN apt update && apt install -y locales locales-all libcurl4-openssl-dev spamassassin exim4-daemon-heavy sa-exim clamav clamav-daemon python-setuptools python-docutils libmysql++-dev wget less libdbi-perl libdbd-mysql-perl pkg-config dh-autoreconf libestr-dev uuid-dev git systemd libgcrypt-dev flex bison python-pip
 
